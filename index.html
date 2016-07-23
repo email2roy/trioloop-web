@@ -33,7 +33,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href="source/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="source/css/trioloop-min.css" >
+		<link rel="stylesheet" href="source/css/trioloop.css" >
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -345,9 +345,12 @@
 						<div class="col-lg-12">
 							<h2 class="text-center section-heading">Contact Us</h2>
 						</div>
+						
 						<div class="col-lg-6 col-md-8">
+							<div id="contact-overlay"><img src="./source/images/spinner.gif" /></div>
 							<h3>Enquiry</h3>
 							<form class="inline" id="contactForm" method="post" >
+								<input type="hidden" name="_next" value="thanks" />
 								<div class="row">
 									<div class="col-sm-6 height-contact-element">
 										<div class="form-group">

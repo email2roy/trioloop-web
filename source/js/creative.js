@@ -52,6 +52,7 @@ var goodToGo = false;
 var messgaeError = 'Request can not be send';
 var pattern = new RegExp(/^(('[\w-\s]+')|([\w-]+(?:\.[\w-]+)*)|('[\w-\s]+')([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 
+$('#contact-overlay').show();
 
  if (name && name.length > 0 && $.trim(name) !='' && message && message.length > 0 && $.trim(message) !='' && email && email.length > 0 && $.trim(email) !='') {
     if (pattern.test(email)) {
@@ -76,18 +77,21 @@ if (goodToGo) {
      $('#success').html('<div class="col-md-12 text-center"><img src="./source/images/spinner.gif" alt="spinner" /></div>');
    },
    success:function(response){
-   	  console.log(response);
-     if (response==1) {
+   	 console.log(response);
+     if (response) {
      	$('#success').html('<div class="col-md-12 text-center">Your email was sent successfully</div>');
      } else {
-     	$('#success').html('<div class="col-md-12 text-center">E-mail was not sent. Please try again!</div>');
+     	$('#success').html('<div class="col-md-12 text-center">E-mail was not sent. Please try again!'+response+'</div>');
      }
    },
    error:function(e){
+   	console.log('Error');
      $('#success').html('<div class="col-md-12 text-center">We could not fetch the data from the server. Please try again!</div>');
    },
    complete: function(done){
      console.log('Finished');
+     $('#contact-overlay').hide();
+
    },
    });
    return true;

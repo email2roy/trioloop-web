@@ -860,6 +860,19 @@ ul.service-list-wrap li {
   background-color: #eee;
 }
 
+
+#contact-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.4);
+  text-align: center;
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
   /* line 819, ../sass/trioloop.scss */
   .service-item-img-wrap-CSD {
@@ -1038,3 +1051,4 @@ ul.service-list-wrap li {
     background-size: 83px 31px;
   }
 }
+
