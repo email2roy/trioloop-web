@@ -78,10 +78,11 @@ if (goodToGo) {
    },
    success:function(response){
    	 console.log(response);
-     if (response) {
+     if (response.next=="/thanks") {
      	$('#success').html('<div class="col-md-12 text-center">Your email was sent successfully</div>');
+     	$('#contactForm').trigger("reset");
      } else {
-     	$('#success').html('<div class="col-md-12 text-center">E-mail was not sent. Please try again!'+response+'</div>');
+     	$('#success').html('<div class="col-md-12 text-center">E-mail was not sent. Please try again!</div>');
      }
    },
    error:function(e){
