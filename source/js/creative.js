@@ -72,13 +72,13 @@ if (goodToGo) {
    url: "https://formspree.io/info@trioloop.com", 
    method: "POST",
    dataType: "json",
-   data: {message: "hello!"},
+   data: $('#contactForm').serializeObject() ,
    beforeSend: function() {
      //$('#success').html('<div class="col-md-12 text-center"><img src="./source/images/spinner.gif" alt="spinner" /></div>');
    },
    success:function(response){
    	 console.log(response);
-     if (response.next=="/thanks") {
+     if (response.success!="") {
      	$('#success').html('<div class="col-md-12 text-center">Your email was sent successfully</div>');
      	$('#contactForm').trigger("reset");
      } else {
