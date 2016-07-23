@@ -73,18 +73,16 @@ if (goodToGo) {
    dataType: "json",
    data: {message: "hello!"},
    beforeSend: function() {
-     $('#success').html('<div class="col-md-12 text-center"><img src="http://loading.io/loader/?use=eyJzaXplIjo5Niwic3BlZWQiOjEsImNiayI6IiNmZmZmZmYiLCJjMSI6IiNkZjc2MGMiLCJjMiI6IjEyIiwiYzMiOiI3IiwiYzQiOiIyMCIsImM1IjoiNSIsImM2IjoiMzAiLCJ0eXBlIjoiZGVmYXVsdCJ9" alt="spinner" /></div>');
+     $('#success').html('<div class="col-md-12 text-center"><img src="./soruce/images/spinner.gif" alt="spinner" /></div>');
    },
    success:function(response){
      if (response==1) {
-     $('#success').html('<div class="col-md-12 text-center">Your email was sent successfully</div>');
-     window.location.reload();
+     	$('#success').html('<div class="col-md-12 text-center">Your email was sent successfully</div>');
      } else {
-     $('#success').html('<div class="col-md-12 text-center">E-mail was not sent. Please try again!</div>');
+     	$('#success').html('<div class="col-md-12 text-center">E-mail was not sent. Please try again!</div>');
      }
    },
    error:function(e){
-   	 alert(JSON.stringify($('#contactForm').serializeObject()));
      $('#success').html('<div class="col-md-12 text-center">We could not fetch the data from the server. Please try again!</div>');
    },
    complete: function(done){
