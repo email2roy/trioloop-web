@@ -74,7 +74,7 @@ if (goodToGo) {
    dataType: "json",
    data: {message: "hello!"},
    beforeSend: function() {
-     $('#success').html('<div class="col-md-12 text-center"><img src="./source/images/spinner.gif" alt="spinner" /></div>');
+     //$('#success').html('<div class="col-md-12 text-center"><img src="./source/images/spinner.gif" alt="spinner" /></div>');
    },
    success:function(response){
    	 console.log(response);

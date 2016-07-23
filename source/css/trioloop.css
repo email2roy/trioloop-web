@@ -63,6 +63,11 @@ h3 {
   margin-bottom: 5px;
 }
 
+h3.signature {
+	font-family: 'Mr Dafoe', Helvetica, sans-serif;
+  	font-size: 24px;
+}
+
 /* line 139, ../sass/trioloop.scss */
 .row.no-gutters > [class^="col-"] .form-control,
 .row.no-gutters > [class*=" col-"] .form-control {
@@ -960,6 +965,11 @@ ul.service-list-wrap li {
   h3, h4 {
     font-size: 14px;
     line-height: 24px;
+  }
+  
+  h3.signature{
+  	font-family: 'Mr Dafoe', Helvetica, sans-serif;
+  	font-size: 18px;
   }
 
   /* line 896, ../sass/trioloop.scss */

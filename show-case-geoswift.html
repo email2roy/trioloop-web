@@ -33,7 +33,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 		<link href="source/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<!-- Custom CSS -->
-		<link rel="stylesheet" href="source/css/trioloop-min.css" >
+		<link rel="stylesheet" href="source/css/trioloop.css" >
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -54,7 +54,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand page-scroll-custom" href="#home"><img srcset="source/images/triloop_logo_hor@2x.jpg" src="source/images/triloop_logo_hor.jpg" alt="trioloop logo" /></a>
+					<a class="navbar-brand" href="index.html"><img srcset="source/images/triloop_logo_hor@2x.jpg" src="source/images/triloop_logo_hor.jpg" alt="trioloop logo" /></a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right custom-menu">
@@ -99,8 +99,9 @@ a lot of business opportunities to Geoswift
 						<div class="showcase-COTR-content-wrap orange">
 							<h3>Challenges</h3>
 							<p class="text-small text-left">
-Geoswift is an international financial service provider. In order to facilitate efficient and seamless fund remittance,
+In order to facilitate efficient and seamless fund remittance,
 Geoswift is required to build a secure and easy to use web services for their client.
+Workflow process and audit trail is important to make sure the operation stays complaint. 
 							</p>
 						</div>
 					</div>
@@ -110,9 +111,10 @@ Geoswift is required to build a secure and easy to use web services for their cl
 						<div class="showcase-COTR-content-wrap green">
 							<h3>Our Solution</h3>
 							<p class="text-small text-left">
-							- Role based administrator and merchant portal<br>
-							- Easy to implement secure RESTful Web Service<br>
-							- PCI-DSS ready architecture and code<br>
+							- Role based administrator and merchant portal<br />
+							- Easy to implement secure RESTful Web Service<br />
+							- Workflow and audit trail feature to ensure it stays complaint<br />
+							- PCI-DSS compliant system<br />
 							</p>
 						</div>
 					</div>
@@ -120,9 +122,9 @@ Geoswift is required to build a secure and easy to use web services for their cl
 						<div class="showcase-COTR-content-wrap blue">
 							<h3>Technology used</h3>
 							<p class="text-small text-left">
-							- Java<br>
-							- Spring Security<br>
-							- RESTful Web Services
+							- Java<br />
+							- Spring Security<br />
+							- RESTful Web Services<br />
 							- Microsoft SQL Server
 							</p>
 						</div>
@@ -136,7 +138,9 @@ Geoswift is required to build a secure and easy to use web services for their cl
 							</div>
 							<div class="col-md-10">
 								<p class="text-mid text-left">
-Trioloop has helped Geoswift to build a secure yet easy to use API and web-based merchant portal for their client make remittance to and from China. The system is PCI-DSS compliant which provide extra confident to the consumer and merchants. It is integrated with multiple gateway such as China Union Pay, Tenpay and so on allowing different payment and remittance options. 
+Trioloop has helped Geoswift to build a secure yet easy to use API and web-based merchant portal for their client make remittance to and from China. 
+The system is PCI-DSS compliant which provide extra confident to the consumer and merchants. 
+It is integrated with multiple gateways such as China Union Pay, Tenpay and so on allowing different payment and remittance options. 
 								</p>
 							</div>
 						</div>
@@ -182,7 +186,7 @@ Trioloop has helped Geoswift to build a secure yet easy to use API and web-based
 						<div class="nav-end-mid">
 							<h2 class="text-light text-center">Other cases</h2>
 							<hr class="trioloop-hr">
-							<a href="news.html" target="_blank">
+							<a href="news.html">
 								<h2 class="text-light text-center">Back home</h2>
 							</a>
 						</div>
@@ -210,13 +214,16 @@ Trioloop has helped Geoswift to build a secure yet easy to use API and web-based
 						<div class="col-lg-12">
 							<h2 class="text-center section-heading">Contact Us</h2>
 						</div>
+						
 						<div class="col-lg-6 col-md-8">
+							<div id="contact-overlay"><img src="./source/images/spinner.gif" /></div>
 							<h3>Enquiry</h3>
 							<form class="inline" id="contactForm" method="post" >
+								<input type="hidden" name="_next" value="thanks" />
 								<div class="row">
 									<div class="col-sm-6 height-contact-element">
 										<div class="form-group">
-											<input type="text" name="first_name" class="form-control custom-labels" id="name" placeholder="Name" required data-validation-required-message="Please write your name!"/>
+											<input type="text" name="name" class="form-control custom-labels" id="name" placeholder="Name" required data-validation-required-message="Please write your name!"/>
 											<p class="help-block text-danger"></p>
 										</div>
 									</div>
@@ -228,7 +235,7 @@ Trioloop has helped Geoswift to build a secure yet easy to use API and web-based
 									</div>
 									<div class="col-sm-12 height-contact-element">
 										<div class="form-group">
-											<textarea type="text" name="message" class="form-control custom-labels" id="Message" placeholder="message" required data-validation-required-message="Please write a message!" name="message" rows="4" cols="30"></textarea>
+											<textarea type="text" name="message" class="form-control custom-labels" id="message" placeholder="Message" required data-validation-required-message="Please write a message!" name="message" rows="4" cols="30"></textarea>
 										</div>
 									</div>
 									<div class="col-sm-9 col-xs-6 height-contact-element">
@@ -247,6 +254,7 @@ Trioloop has helped Geoswift to build a secure yet easy to use API and web-based
 						</div>
 						<div class="col-lg-6 col-md-4 ">
 							<div class="row">
+								<!--
 								<div class="col-md-12">
 									<h3>Social medias</h3>
 									<div class="form-group">
@@ -254,28 +262,28 @@ Trioloop has helped Geoswift to build a secure yet easy to use API and web-based
 										<a href=""><span class="social-icon"><i class="fa fa-2x fa-twitter"></i></span></a>
 										<a href=""><span class="social-icon"><i class="fa fa-2x fa-linkedin"></i></span></a>
 										<a href=""><span class="social-icon"><i class="fa fa-2x fa-git"></i></span></a>
-										<!-- http://stackoverflow.com/questions/12448134/social-share-links-with-custom-icons -->
 									 </div>
 								 </div>
+								 -->
 								<div class="col-lg-6 col-md-12">
 									<h3>Email</h3>
-									<h2 class="text-light"><a href="mailto:email@trioloop.com" target="_blank">email@trioloop.com</a></h2>
+									<h2 class="text-light"><a href="mailto:info@trioloop.com" target="_blank">info@trioloop.com</a></h2>
 								 </div>
 								<div class="col-lg-6 col-md-12">
 									<h3>Phone</h3>
-									<h2 class="text-light">+852 0000 0000</h2>
+									<h2 class="text-light">+852 8175 8173</h2>
 								 </div>
 								<div class="col-md-12">
 									<h3>Address</h3>
 									<h2 class="text-light">
-									Unit 9, 7 Floor, Hoi Luen 
-									<br> Industrial Centre
-									<br> 55 Hoi Yuen Road,
-									<br> Kwun Tong, Kowloon, Hong Kong</h2>
+									Unit 9, 7 Floor,  
+									<br>Hoi Luen Industrial Centre,
+									<br>55 Hoi Yuen Road,
+									<br>Kwun Tong, Kowloon, Hong Kong</h2>
 								 </div>
 								<div class="col-md-12">
 									<footer id="footer">
-										<p class="text-remark">Copyright © Trioloop LTD 2015</p>
+										<p class="text-remark">Copyright &copy; Trioloop Limited 2016</p>
 									</footer>
 								 </div>
 							</div>
@@ -293,7 +301,7 @@ Trioloop has helped Geoswift to build a secure yet easy to use API and web-based
 	    <script type="text/javascript" src="source/js/greensock-js/minified/TweenMax.min.js"></script>
 	    <script type="text/javascript" src="source/js/greensock-js/minified/TimelineLite.min.js"></script>    
 	    <!-- custom js -->
-		<script src="source/js/creative-min.js"></script>
+		<script src="source/js/creative.js"></script>
 
 		<script type="text/javascript">
 
